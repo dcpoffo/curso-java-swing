@@ -25,7 +25,11 @@ public class SplashScreen extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    for (int i = 0; i <= 100; i++) {
+                        jProgressBar1.setValue(i);
+                        Thread.sleep(50);
+                    }
+                    
                     new TelaLogin().setVisible(true);
                     dispose();
                 } catch (Exception e) {
