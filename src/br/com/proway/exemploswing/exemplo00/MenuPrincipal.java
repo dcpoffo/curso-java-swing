@@ -29,6 +29,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButtonComponentes = new javax.swing.JButton();
         jButtonExemploTabela = new javax.swing.JButton();
+        jButtonPrecos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -46,6 +47,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonPrecos.setText("Preços");
+        jButtonPrecos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPrecosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -55,15 +63,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jButtonComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonExemploTabela)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonPrecos, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonExemploTabela, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonExemploTabela, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonPrecos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(310, Short.MAX_VALUE))
         );
 
@@ -86,6 +98,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         tela.setVisible(true);
         
     }//GEN-LAST:event_jButtonExemploTabelaActionPerformed
+
+    private void jButtonPrecosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrecosActionPerformed
+        // TODO add your handling code here:
+        
+        Preco tela = new Preco();
+        tela.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonPrecosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,5 +145,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonComponentes;
     private javax.swing.JButton jButtonExemploTabela;
+    private javax.swing.JButton jButtonPrecos;
     // End of variables declaration//GEN-END:variables
 }
